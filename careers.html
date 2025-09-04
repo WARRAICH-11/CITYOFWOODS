@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - City of Woods</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <a class="logo" href="index.html"><img src="assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html#awards">Awards</a></li>
+                    <li><a href="index.html#featured-collection">Collection</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a class="active" href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html#awards" onclick="closeMenu()">Awards</a></li>
+                <li><a href="index.html#featured-collection" onclick="closeMenu()">Collection</a></li>
+                <li><a href="index.html#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="careers.html" onclick="closeMenu()">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="featured-section">
+            <h2 class="section-title">Join Our Team</h2>
+            <div class="featured-grid">
+                <div class="featured-main" style="background-image:url('assets/images/sofa1.jpg'); background-size:cover; background-position:center;">
+                    <h3 class="featured-title">Craft the Future of Furniture</h3>
+                    <p class="featured-description">We are looking for passionate designers, engineers, and artisans to join us in creating world-class products.</p>
+                    <a href="mailto:jobs@cityofwoods.example" class="featured-btn">Email Your Portfolio</a>
+                </div>
+                <div class="featured-stats">
+                    <div class="stat-card"><span class="stat-number">12</span><span class="stat-label">Open Roles</span></div>
+                    <div class="stat-card"><span class="stat-number">5</span><span class="stat-label">Locations</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

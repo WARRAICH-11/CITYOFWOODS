@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Office</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <a class="logo" href="../index.html"><img src="../assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#awards">Awards</a></li>
+                    <li><a class="active" href="office.html">Office</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="../index.html#awards" onclick="closeMenu()">Awards</a></li>
+                <li><a href="office.html" onclick="closeMenu()">Office</a></li>
+                <li><a href="../index.html#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="../about.html" onclick="closeMenu()">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="awards-section">
+            <h2 class="section-title">Office Collection</h2>
+            <div class="awards-grid">
+                <div class="award-card" data-category="collection">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="../assets/images/chair.svg" class="card-img" alt="Chair" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">ERGONOMIC</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Elegance Executive Chair</h3>
+                        <div class="card-category">Seating / Office</div>
+                        <p class="card-description">Ergonomic design, premium materials, and all-day comfort.</p>
+                        <div class="card-meta"><span class="card-price">$2,499</span><span class="card-date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

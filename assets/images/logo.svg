@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" fill="none">
+  <rect width="220" height="80" rx="12" fill="#1f1a12"/>
+  <g transform="translate(20,10)">
+    <g>
+      <circle cx="38" cy="24" r="22" fill="#2e7d32"/>
+      <circle cx="64" cy="24" r="22" fill="#388e3c"/>
+      <circle cx="90" cy="24" r="22" fill="#8d6e63"/>
+      <circle cx="116" cy="24" r="22" fill="#a1887f"/>
+      <path d="M64 60c16 0 28-12 28-28S80 4 64 4 36 16 36 32s12 28 28 28Z" fill="none"/>
+      <path d="M64 10c-8 14-8 28-8 50M64 10c8 14 8 28 8 50" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <path d="M56 32c-6 2-10 6-14 12M72 32c6 2 10 6 14 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(120,46)">
+      <circle cx="0" cy="0" r="3" fill="#fff"/>
+      <circle cx="14" cy="0" r="3" fill="#fff"/>
+    </g>
+  </g>
+  <text x="120" y="55" font-family="Georgia, serif" font-size="20" fill="#ffffff">City of Woods</text>
+</svg>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Awards - City of Woods</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <a class="logo" href="index.html"><img src="assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a class="active" href="annual-awards.html">Annual Awards</a></li>
+                    <li><a href="index.html#featured-collection">Collection</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="annual-awards.html" onclick="closeMenu()">Annual Awards</a></li>
+                <li><a href="index.html#featured-collection" onclick="closeMenu()">Collection</a></li>
+                <li><a href="index.html#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="awards-section">
+            <h2 class="section-title">Annual Award Winners</h2>
+            <div class="awards-grid">
+                <div class="award-card" data-category="annual">
+                    <div class="card-image">
+                        <img src="assets/images/sofa3.jpg" alt="Chair of the Year" style="width:100%; height:100%; object-fit:cover;" />
+                        <div class="award-label">WINNER</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Chair of the Year</h3>
+                        <div class="card-category">Seating</div>
+                        <p class="card-description">Celebrating the finest in ergonomic and aesthetic excellence.</p>
+                        <div class="card-meta"><span class="card-price">—</span><span class="card-date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

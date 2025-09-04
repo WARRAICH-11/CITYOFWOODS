@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Woods - Premium Furniture Awards</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                ☰
+            </button>
+            <a class="logo" href="index.html"><img src="assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#awards" class="active">Awards</a></li>
+                    <li><a href="#featured-collection">Collection</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#awards" onclick="closeMenu()">Awards</a></li>
+                <li><a href="#featured-collection" onclick="closeMenu()">Collection</a></li>
+                <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li class="divider"></li>
+                <li><a href="about.html" onclick="closeMenu()">Company</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h1 class="hero-title">FURNITURE<br>OF THE DAY</h1>
+                    <p class="hero-subtitle">Celebrating excellence in furniture design and craftsmanship</p>
+                    <div class="award-badge">
+                        <div class="award-star"></div>
+                        Premium Award Winner 2025
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-slider" id="heroBgSlider">
+                        <div class="hero-slides">
+                            <div class="hero-slide"><img src="assets/images/hero1.jpg" alt="Hero visual 1"></div>
+                            <div class="hero-slide"><img src="assets/images/hero2.jpg" alt="Hero visual 2"></div>
+                            <div class="hero-slide"><img src="assets/images/hero3.jpg" alt="Hero visual 3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Awards</button>
+                <button class="filter-tab" data-filter="fotd">Furniture of the Day</button>
+                <button class="filter-tab" data-filter="fotm">Furniture of the Month</button>
+                <button class="filter-tab" data-filter="collection">Collections</button>
+            </div>
+        </section>
+
+        <section id="awards" class="awards-section">
+            <div class="awards-grid">
+                <div class="award-card" data-category="fotd">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/chair.svg" alt="Elegance Executive Chair" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">FOTD</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Elegance Executive Chair</h3>
+                        <div class="card-category">Seating / Office</div>
+                        <p class="card-description">A revolutionary approach to ergonomic design, combining premium leather with sustainable materials for the modern workspace.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$2,499</span>
+                            <span class="card-date">Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="monthly-winners" class="award-card" data-category="fotm">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/sofa.svg" alt="Royal Living Collection" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">FOTM</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Royal Living Collection</h3>
+                        <div class="card-category">Living Room / Luxury</div>
+                        <p class="card-description">An exquisite collection that redefines comfort and sophistication for contemporary living spaces.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$8,999</span>
+                            <span class="card-date">Dec 01, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-category="fotd">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/mirror.svg" alt="Heritage Dining Set" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">FOTD</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Heritage Dining Set</h3>
+                        <div class="card-category">Dining / Traditional</div>
+                        <p class="card-description">Masterfully crafted dining furniture that brings families together with timeless design and exceptional quality.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$4,299</span>
+                            <span class="card-date">Dec 12, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-category="collection">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/bookshelf.svg" alt="Minimalist Study Collection" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">NEW</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Minimalist Study Collection</h3>
+                        <div class="card-category">Office / Modern</div>
+                        <p class="card-description">Clean lines and functional beauty come together in this award-winning home office collection.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$3,199</span>
+                            <span class="card-date">Dec 10, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-category="fotd">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/bed.svg" alt="Dreams Luxury Bedroom Suite" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">FOTD</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dreams Luxury Bedroom Suite</h3>
+                        <div class="card-category">Bedroom / Premium</div>
+                        <p class="card-description">Transform your bedroom into a luxurious retreat with this award-winning suite featuring innovative storage solutions.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$6,799</span>
+                            <span class="card-date">Dec 08, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-category="collection">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="assets/images/house.svg" alt="Scandinavian Living Series" class="card-img" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">SPECIAL</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Scandinavian Living Series</h3>
+                        <div class="card-category">Complete Set / Nordic</div>
+                        <p class="card-description">Embrace the Nordic lifestyle with this complete furniture series that embodies simplicity, functionality, and natural beauty.</p>
+                        <div class="card-meta">
+                            <span class="card-price">$12,999</span>
+                            <span class="card-date">Dec 05, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider-section">
+            <h2 class="section-title">Spotlight Gallery</h2>
+            <div class="slider" id="heroSlider">
+                <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+                <div class="slides" role="region" aria-roledescription="carousel">
+                    <div class="slide" data-index="0">
+                        <img src="assets/images/bed1.jpg" alt="Refined bedroom aesthetic" />
+                        <div class="slide-caption">Calm spaces. Deeper sleep.</div>
+                    </div>
+                    <div class="slide" data-index="1">
+                        <img src="assets/images/bed2.jpg" alt="Luxury bed setup" />
+                        <div class="slide-caption">Luxury, layered with comfort.</div>
+                    </div>
+                    <div class="slide" data-index="2">
+                        <img src="assets/images/sofa1.jpg" alt="Modern sofa" />
+                        <div class="slide-caption">Comfort meets clean lines.</div>
+                    </div>
+                    <div class="slide" data-index="3">
+                        <img src="assets/images/sofa2.jpg" alt="Sculpted seating" />
+                        <div class="slide-caption">Sculpted for conversation.</div>
+                    </div>
+                    <div class="slide" data-index="4">
+                        <img src="assets/images/table1.jpg" alt="Dining table centerpiece" />
+                        <div class="slide-caption">Gather. Share. Repeat.</div>
+                    </div>
+                    <div class="slide" data-index="5">
+                        <img src="assets/images/table2.jpg" alt="Minimal table detail" />
+                        <div class="slide-caption">Details define the piece.</div>
+                    </div>
+                    <div class="slide" data-index="6">
+                        <img src="assets/images/sofa3.jpg" alt="Cozy living setup" />
+                        <div class="slide-caption">Live beautifully every day.</div>
+                    </div>
+                </div>
+                <button class="slider-btn next" aria-label="Next slide">›</button>
+                <div class="slider-dots" aria-label="Slide navigation"></div>
+            </div>
+        </section>
+
+        <section id="featured-collection" class="featured-section">
+            <h2 class="section-title">Featured This Month</h2>
+            <div class="featured-grid">
+                <div class="featured-main">
+                    <h3 class="featured-title">Artisan's Choice Collection</h3>
+                    <p class="featured-description">Discover our most celebrated pieces, handpicked by design experts and loved by customers worldwide. Each piece represents the pinnacle of craftsmanship and innovation in furniture design.</p>
+                    <a href="#featured-collection" class="featured-btn">Explore Collection</a>
+                </div>
+                <div class="featured-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">247</span>
+                        <span class="stat-label">Awards Won</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">38</span>
+                        <span class="stat-label">Years Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2 class="section-title">Latest from Our Blog</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/table1.jpg" alt="Living room styling" />
+                            <div class="blog-category">Design Tips</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>10 Ways to Style Your Living Room</h3>
+                            <p class="blog-excerpt">Discover the latest trends in living room design and how to incorporate them into your space.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/table2.jpg" alt="Sustainable wood close-up" />
+                            <div class="blog-category">Materials</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Sustainable Wood: A Buyer's Guide</h3>
+                            <p class="blog-excerpt">Learn how to choose eco-friendly furniture that's both beautiful and sustainable.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/sofa1.jpg" alt="Minimalist interior inspiration" />
+                            <div class="blog-category">Inspiration</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Minimalist Design: Less is More</h3>
+                            <p class="blog-excerpt">Explore how minimalist design principles can transform your living space.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="view-all-container">
+                    <a href="#" class="view-all-btn">View All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Our Story</h2>
+                        <p>Founded in 1985, City of Woods has been at the forefront of furniture design and craftsmanship. What began as a small workshop has grown into a globally recognized brand, known for our commitment to quality, sustainability, and innovative design.</p>
+                        <p>Our team of skilled artisans combines traditional techniques with modern technology to create pieces that are not only beautiful but built to last for generations.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">38+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Awards Won</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <span>Our Workshop</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section">
+                    <h3>Meet Our Master Craftsmen</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-image"></div>
+                            <h4>Aslam Gujjar</h4>
+                            <p>Lead Designer</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-image"></div>
+                            <h4>Shahid Jutt</h4>
+                            <p>Master Carpenter</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-image"></div>
+                            <h4>Viladimir Putin</h4>
+                            <p>Materials Expert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Awards</h4>
+                <ul>
+                    <li><a href="#fotd">Furniture of the Day</a></li>
+                    <li><a href="#monthly-winners">Monthly Winners</a></li>
+                    <li><a href="annual-awards.html">Annual Awards</a></li>
+                    <li><a href="submit-entry.html">Submit Entry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="collections/living-room.html">Living Room</a></li>
+                    <li><a href="collections/bedroom.html">Bedroom</a></li>
+                    <li><a href="collections/office.html">Office</a></li>
+                    <li><a href="collections/dining-room.html">Dining Room</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#story">Our Story</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping-policy.html">Shipping</a></li>
+                    <li><a href="return-policy.html">Returns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved. | Celebrating excellence in furniture design since 1985.</p>
+        </div>
+    </footer>
+</body>
+</html>

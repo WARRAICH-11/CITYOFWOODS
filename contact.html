@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - City of Woods</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <a class="logo" href="index.html"><img src="assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html#awards">Awards</a></li>
+                    <li><a href="index.html#featured-collection">Collection</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html#awards" onclick="closeMenu()">Awards</a></li>
+                <li><a href="index.html#featured-collection" onclick="closeMenu()">Collection</a></li>
+                <li><a href="index.html#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="featured-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="featured-grid">
+                <div class="featured-main" style="background-image:url('assets/images/sofa2.jpg'); background-size:cover; background-position:center;">
+                    <h3 class="featured-title">We'd love to hear from you</h3>
+                    <p class="featured-description">Email us at support@cityofwoods.example or fill the short form below.</p>
+                    <a href="mailto:support@cityofwoods.example" class="featured-btn">Email Support</a>
+                </div>
+                <div class="featured-stats">
+                    <div class="stat-card"><span class="stat-number">24/7</span><span class="stat-label">Support</span></div>
+                    <div class="stat-card"><span class="stat-number">4.9</span><span class="stat-label">Avg Rating</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

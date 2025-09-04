@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Living Room</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <a class="logo" href="../index.html"><img src="../assets/images/City of Woods Logo.png" alt="City of Woods logo" />CITY OF WOODS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#awards">Awards</a></li>
+                    <li><a class="active" href="living-room.html">Living Room</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="../index.html#awards" onclick="closeMenu()">Awards</a></li>
+                <li><a href="living-room.html" onclick="closeMenu()">Living Room</a></li>
+                <li><a href="../index.html#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="../about.html" onclick="closeMenu()">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="awards-section">
+            <h2 class="section-title">Living Room Collection</h2>
+            <div class="awards-grid">
+                <div class="award-card" data-category="collection">
+                    <div class="card-image">
+                        <div class="image-3d">
+                            <img src="../assets/images/sofa.svg" class="card-img" alt="Sofa" />
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="award-label">NEW</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Royal Living Sofa</h3>
+                        <div class="card-category">Luxury</div>
+                        <p class="card-description">Comfort meets style with premium upholstery and durable frame.</p>
+                        <div class="card-meta"><span class="card-price">$4,999</span><span class="card-date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 City of Woods. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
