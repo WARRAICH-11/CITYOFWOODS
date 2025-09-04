@@ -275,12 +275,37 @@ function initHeroBackgroundSlider(selector) {
 // Mobile menu controls
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
-    if (!menu) return;
-    menu.classList.toggle('open');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menu) {
+        const isOpen = menu.style.display === 'block';
+        menu.style.display = isOpen ? 'none' : 'block';
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+        menuToggle.setAttribute('aria-expanded', !isOpen);
+    }
 }
 
 function closeMenu() {
     const menu = document.getElementById('mobileMenu');
-    if (!menu) return;
-    menu.classList.remove('open');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menu) {
+        menu.style.display = 'none';
+        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
 }
+
+// Close menu when clicking outside
+window.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobileMenu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menu && !menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeMenu();
+    }
+});
+
+// Close menu when window is resized to desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+});
