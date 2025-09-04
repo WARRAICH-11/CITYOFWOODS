@@ -276,36 +276,61 @@ function initHeroBackgroundSlider(selector) {
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     const menuToggle = document.querySelector('.menu-toggle');
-    if (menu) {
-        const isOpen = menu.style.display === 'block';
-        menu.style.display = isOpen ? 'none' : 'block';
-        document.body.style.overflow = isOpen ? '' : 'hidden';
-        menuToggle.setAttribute('aria-expanded', !isOpen);
+    const isOpen = menu.classList.contains('active');
+    
+    if (isOpen) {
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '☰';
+    } else {
+        menu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.innerHTML = '✕';
     }
 }
 
 function closeMenu() {
     const menu = document.getElementById('mobileMenu');
     const menuToggle = document.querySelector('.menu-toggle');
-    if (menu) {
-        menu.style.display = 'none';
+    if (menu && menu.classList.contains('active')) {
+        menu.classList.remove('active');
         document.body.style.overflow = '';
         menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '☰';
     }
 }
 
-// Close menu when clicking outside
-window.addEventListener('click', function(event) {
+// Close menu when clicking outside or on a link
+document.addEventListener('click', function(event) {
     const menu = document.getElementById('mobileMenu');
     const menuToggle = document.querySelector('.menu-toggle');
-    if (menu && !menu.contains(event.target) && !menuToggle.contains(event.target)) {
+    const isClickInsideMenu = menu.contains(event.target);
+    const isClickOnToggle = menuToggle && menuToggle.contains(event.target);
+    
+    if (menu && menu.classList.contains('active') && !isClickInsideMenu && !isClickOnToggle) {
         closeMenu();
     }
 });
 
 // Close menu when window is resized to desktop
+let resizeTimer;
 window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        closeMenu();
-    }
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    }, 250);
+});
+
+// Close menu when clicking on mobile menu links
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Only close menu if it's not an anchor link to the same page
+        if (this.getAttribute('href').startsWith('#')) {
+            closeMenu();
+        }
+    });
 });
